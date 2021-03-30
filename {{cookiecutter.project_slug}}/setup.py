@@ -2,7 +2,7 @@
 
 """The setup script."""
 
-from setuptools import setup, find_packages
+from setuptools import setup, find_namespace_packages
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -34,7 +34,7 @@ setup(
     {%- if 'no' not in cookiecutter.command_line_interface|lower %}
     entry_points={
         'console_scripts': [
-            '{{ cookiecutter.project_slug }}=minos.cli:main',
+            '{{ cookiecutter.project_slug }}=minos.{{ cookiecutter.project_library }}.cli:main',
         ],
     },
     {%- endif %}
@@ -43,7 +43,7 @@ setup(
     include_package_data=True,
     keywords='{{ cookiecutter.project_slug }}',
     name='{{ cookiecutter.project_slug }}',
-    packages=find_packages(include=['minos', 'minos.*']),
+    packages=find_namespace_packages(include=['minos.*']),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
