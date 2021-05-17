@@ -1,7 +1,5 @@
-History
-=======
+# History
 
-{{ cookiecutter.version }} ({% now 'local' %})
-------------------
+## {{ cookiecutter.version }} ({% now 'local' %})
 
 * First release on PyPI.
