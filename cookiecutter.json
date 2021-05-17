@@ -1,6 +1,6 @@
 {
-  "full_name": "Andrea Mucci",
-  "email": "andrea@clariteia.com",
+  "full_name": "Clariteia Devs",
+  "email": "devs@clariteia.com",
   "project_name": "Minos Boileplate",
   "project_library": "boilerplate",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
