@@ -7,7 +7,7 @@ Welcome to {{ cookiecutter.project_name }}'s documentation!
 
    readme
    usage
-   modules
+   api/modules
    authors
    history
 
