@@ -13,6 +13,9 @@ import sys
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
 import click
 {%- endif %}
+{%- if cookiecutter.command_line_interface|lower == 'typer' %}
+import typer
+{%- endif %}
 
 {% if cookiecutter.command_line_interface|lower == 'click' %}
 @click.command()
@@ -35,7 +38,27 @@ def main():
           "minos.cli.main")
     return 0
 {%- endif %}
+{%- if cookiecutter.command_line_interface|lower == 'typer' %}
+app = typer.Typer()
 
+@app.command("start")
+def start():
+    """Perform Start operation."""
+
+    raise NotImplementedError
+
+
+@app.command("status")
+def status():
+    """Perform Status operation."""
+    raise NotImplementedError
+
+
+@app.command("stop")
+def stop():
+    """Perform Stop operation."""
+    raise NotImplementedError
+{%- endif %}
 
 if __name__ == "__main__":
     sys.exit(main())  # pragma: no cover

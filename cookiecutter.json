@@ -6,6 +6,6 @@
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_short_description": "Minos Boilerplate contains all the boilerplate you need to create a Minos Python package.",
   "version": "0.0.1",
-  "command_line_interface": ["Click", "Argparse", "No command-line interface"],
+  "command_line_interface": ["Click", "Argparse", "Typer", "No command-line interface"],
   "_copy_without_render": [".github/*"]
 }
