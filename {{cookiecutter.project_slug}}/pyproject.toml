@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "{{ cookiecutter.project_slug }}"
-version = "0.0.11"
+version = "{{ cookiecutter.version }}"
 description = "{{ cookiecutter.project_short_description }}"
 readme = "README.md"
 repository = "https://github.com/clariteia/{{ cookiecutter.project_slug }}"
