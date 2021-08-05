@@ -66,8 +66,8 @@ coverage: ## check code coverage quickly with the default Python
 	## $(BROWSER) htmlcov/index.html
 
 reformat: ## check code coverage quickly with the default Python
-	poetry run black --line-length 120 minos tests
-	poetry run isort minos tests
+	poetry run black --line-length 120 minos tests  || (echo "black returned $? exit code")
+	poetry run isort minos tests || (echo "isort returned $? exit code")
 
 docs: ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/{{ cookiecutter.project_slug }}.rst
